@@ -1,0 +1,442 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    scroll-behavior: smooth;
+    list-style: none;
+    border: none;
+    font-family: sans-serif , 'Times New Roman', Times, serif;
+}
+:root{
+    --bg-color: #001;
+    --secondary-bg-color: #012;
+    --third-bg-color: rgb(9, 4, 19);
+    --text-color: #fff;
+    --mein-color: rgb(67, 221, 53);
+}
+html{
+    font-size: 63%;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+/* Header section code */
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 9%;
+    background: rgba( 0 , 0 , 0 , 0.4 );
+    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+}
+
+.logo{
+    font-size: 3rem;
+    font-weight: 800;
+    cursor: pointer;
+    background: -webkit-linear-gradient( rgb(235, 163, 9), #b2e00c);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar a{
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-left: 4rem;
+    transition: all 0.5s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a:active{
+    color: var(--mein-color);
+    border-bottom: 5px solid var(--mein-color)
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--mein-color);
+    cursor: pointer;
+    display: none;
+}
+
+.nav-btn{
+    display: inline-block;
+    padding: 1rem 2.8rem ;
+    background: transparent;
+    color: var(--mein-color);
+    border: 2px solid var(--mein-color);
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: all o.3s ease;
+}
+
+.nav-btn:hover{
+    background: var(--mein-color);
+    color: var(--text-color);
+    box-shadow: 0 0 20px var(--mein-color);
+    transform: scale(1.05);
+}
+
+/* Home Section Code */
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+.home-content h3{
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2){
+    margin-bottom: 2rem;
+}
+
+span{
+    color: var(--mein-color);
+}
+
+.home-content h1{
+    font-size: 5.8rem;
+    font-weight: 700;
+    line-height: 1.3;
+    background: -webkit-linear-gradient( rgb(235, 163, 9), #b2e00c);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.myimg img{
+    width: 25vw;
+    border: 3px solid var(--mein-color);
+    border-radius: 51% 49% 48% 52% / 49% 49% 51% 51%;
+    animation: borderAnimaton 5s linear infinite;
+}
+
+@keyframes  borderAnimaton {
+    0% {
+        border-radius: 51% 49% 48% 52% / 49% 49% 51% 51%;
+    }
+    35% {
+        border-radius: 60% 40% 57% 43% / 40% 54% 46% 60%;
+    } 
+    65% {
+        border-radius: 67% 33% 68% 32% / 27% 70% 30% 73%;
+    } 
+    100% {
+        border-radius: 51% 49% 48% 52% / 49% 49% 51% 51%;
+    }
+}
+
+.home-content p{
+    font-size: 1.8rem;
+}
+
+.social-media a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 4rem;
+    background: transparent;
+    border: 0.2rem solid var(--mein-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--mein-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+}
+
+.social-media a:hover{
+    transform: scale(1.2) translateY(-8px);
+    background-color: var(--mein-color);
+    color: var(--text-color);
+    box-shadow: 0 0 20px var(--mein-color);
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: var(--mein-color);
+    border-radius: 4rem;
+    box-shadow: none;
+    font-size: 1.2rem;
+    color: var(--bg-color);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn:hover{
+    box-shadow: 0 0 1.6rem var(--mein-color);
+}
+
+/* About Section Code  */
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--secondary-bg-color);
+}
+
+.about-img img{
+    width: 25vw;
+    border: 3px solid var(--mein-color);
+    border-radius: 51% 49% 48% 52% / 49% 49% 51% 51%;
+    animation: borderAnimaton 5s linear infinite;
+}
+
+.heading{
+    text-align: left;
+    font-size: 4.5rem;
+}
+
+.about-content{
+    padding: 0.4rem;
+}
+
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content h3{
+    font-size: 2.6rem;
+}
+
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+/* ScrollBar Design Code  */
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--mein-color);
+    width: 50px;
+}
+
+/* Contact Section Code  */
+
+.headingc{
+    text-align: center ;
+    font-size: 4.5rem;
+}
+
+.contact{
+    background: var(--third-bg-color);
+}
+
+.contact h2{
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.contact form{
+    max-width: 90rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    border-radius: 0.8rem;
+    border: 1px solid var(--mein-color);
+    margin: 0.7rem 0;
+    resize: none;
+}
+
+.contact form .input-box input{
+    width: 49%;
+    margin: 0.7rem 0.35rem;
+}
+
+.contact form .btn{
+    margin-top: 2rem;
+}
+
+/* Footer section code */
+
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background: var(--bg-color);
+}
+
+.footer .social{
+    text-align: center;
+    padding-bottom: 25px;
+    color: var(--mein-color);
+}
+
+.footer .social a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: 0.2rem solid var(--mein-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--mein-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+}
+
+.footer .social a:hover{
+    transform: scale(1.2) translateY(-8px);
+    background-color: var(--mein-color);
+    color: var(--text-color);
+    box-shadow: 0 0 20px var(--mein-color);
+}
+
+.footer .copyright{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+/* Responsive Design code */
+
+@media (max-width: 1285px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px){
+    header{
+        padding: 2rem 3%;
+    }
+    section{
+        padding: 10rem 3% 2rem;
+    }
+    .footer{
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 786px){
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 255px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: rgba( 0 , 0 , 0 , 0.9 );
+        transition: 0.3s ease;
+        backdrop-filter: blur(10px);
+    }
+    .navbar a{
+        display: block;
+        padding: 18px;
+        font-size: 22px;
+    }
+    .navbar.active{
+        right: 0;
+    }
+    .home{
+        flex-direction: column;
+    }
+    .home-content h3{
+        font-size: 2.6rem;
+    }
+    .home-content h1{
+        font-size: 5rem;
+    }
+    .home-content{
+        order: 2;
+    }
+    .myimg img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    .about{
+        flex-direction: column;
+    }
+    .about-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    .contact form .input-box input{
+        width: 100%;
+    }
+}
+
+@media (max-width: 617px){
+    .myimg img{
+        width: 80vw;
+        margin-top: 8rem;
+    }
+    .about-img img{
+        width: 80vw;
+        margin-top: 8rem;
+    }
+}
+
+@media (max-width: 426px) {
+    .heading{
+        font-size: 5rem;
+        text-align: center;
+        margin: 2rem 0;
+    }
+    .headingc{
+        font-size: 5rem;
+        text-align: center;
+        margin: 2rem 0;
+    }
+}
